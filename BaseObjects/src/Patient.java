@@ -12,9 +12,7 @@ public class Patient extends Partner{
 	private String lastName;
 	private String middleInitial;
 	private Date date_of_birth;
-	private boolean discharged;
 	
-
 	/**
 	 * 
 	 */
