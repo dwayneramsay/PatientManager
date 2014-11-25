@@ -4,7 +4,9 @@ public class ContactInformation {
 	private ArrayList<ContactDetail> ContactInformationList;
 	
 	public ContactInformation(){
-				
+		
+		ContactInformationList = new ArrayList<ContactDetail>();
+		//ContactInformationList.add(new ContactDetail());
 		
 	}
 	
