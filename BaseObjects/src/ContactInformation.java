@@ -12,6 +12,8 @@ public class ContactInformation {
 		
 	}
 	
+	
+	
 	public void addContactInformation(ContactDetail.ContactDetailGroup contactDetailGroup, ContactDetail.ContactDetailType contactDetailType) 
 			throws Exception{
 		
@@ -25,18 +27,35 @@ public class ContactInformation {
 		default:
 			throw new Exception();				
 		}
-		
-	 public boolean isContactDetailGroupSet(ContactDetail.ContactDetailGroup contactDetailGroup){
-		 for (int i=0; i<ContactDetailList.size(); i++){
-			 
-		 }
-	 }
-	 {
-		 
-	 }
-		
 	}
-	
+		
+	public boolean isContactDetailGroupSet(ContactDetail.ContactDetailGroup contactDetailGroup){
+		 		 
+		 for (ContactDetail contactDetail : ContactDetailList){
+			 
+			 if (contactDetail.getContactDetailGroup() == contactDetailGroup){
+				 return true;
+			 }
+			 else{
+				 continue;
+			 }			 
+		 }
+		 
+		 return false;
+	 }
+	 
+	 public boolean isContactDetailTypeSet(ContactDetail.ContactDetailType contactDetailType){
+		 for (ContactDetail contactDetail : ContactDetailList){
+			 if (contactDetail.getContactDetailType() == contactDetailType){
+				 return true;
+			 }
+			 else{
+				 continue;
+			 }
+		 }
+		 return false;
+	 }
+			
 	private abstract static class ContactDetail{
 		
 		public static enum ContactDetailGroup {HOME, WORK, SCHOOL};
